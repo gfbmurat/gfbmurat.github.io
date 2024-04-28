@@ -1,0 +1,61 @@
+body {
+    background-color: #333 !important; /* Koyu gri rengi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+.card {
+    width: 800px; /* Genişlik artırıldı */
+    height: 600px !important;
+    margin: 20px;
+    display: flex; /* Kart içeriğini dikey ve yatay olarak hizalar */
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    text-align: center; /* Metinleri ortalar */
+    padding: 20px; /* İçerik etrafına biraz boşluk ekler */
+    box-sizing: border-box; /* Kenar boşluğunu içeriğin genişliği ve yüksekliği dahil eder */
+    background-color: #CCC;
+    letter-spacing: 1.4px;
+    font-size: 20px
+}
+
+.card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex; /* Kart içeriğini dikey ve yatay olarak hizalar */
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    text-align: center; /* Metinleri ortalar */
+}
+
+
+.front {
+    background-color: #FFFFFF;
+}
+
+#translation-cards {
+    background-color: lightcoral;
+    border-radius: .75rem;
+}
+
+.back {
+    background-color: #F3F4F6;
+    transform: rotateY(180deg);
+}
